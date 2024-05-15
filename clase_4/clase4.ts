@@ -30,10 +30,10 @@ if (position === 1) {
 }
 */
 
-/* Una tienda al cumplir años en Octubre ofrece un descuento del 15% a sus clientes en todas sus compras
-•Desarrolle un algoritmo que dada una compra: precio unitario, cantidad y el mes, indicados por el usuario, determine si el cliente tiene descuento o no 
+//Una tienda al cumplir años en Octubre ofrece un descuento del 15% a sus clientes en todas sus compras
+//•Desarrolle un algoritmo que dada una compra: precio unitario, cantidad y el mes, indicados por el usuario, determine  si el cliente tiene descuento o no 
 
-const price: number = readlineSync.questionFloat("Ingrese el precio: ")
+/* const price: number = readlineSync.questionFloat("Ingrese el precio: ")
 const quantity: number = readlineSync.questionFloat("Ingrese la cantidad: ")
 const month: string = readlineSync.question("Ingrese el mes: ")
 const discount = 15
@@ -42,9 +42,8 @@ if (month === "Octubre" || month === "octubre") {
     console.log("El precio final es: ", (price * quantity) -  (price * quantity * discount / 100))
 } else {
     console.log("El precio final es: ", price * quantity)
-}
+} */
 
-*/
 
 
 /* Una empresa desea premiar a sus empleados con un aumento de sueldo. Este aumento se ajusta a la siguiente tabla: 
