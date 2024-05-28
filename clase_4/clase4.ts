@@ -92,3 +92,73 @@ for (let i = 0; i < 3; i++) {
     }
 }
 */
+
+
+/* let numero : number = 1
+let multiploDos: number = 0
+let multiploTres: number = 0
+
+for (let i = 1; i <= 100; i++) {
+    if (numero %  2 == multiploDos) {
+        console.log("es multiplo de dos");
+    } else if (numero % 2 == multiploTres) {
+        console.log("es multiplo de 3");
+        
+    }
+} */
+
+// funciona abajo
+
+/* 
+for (let i = 1; i <= 100; i++) {
+    if (i % 2 === 0 || i % 3 === 0) {
+        console.log(`El número ${i} es múltiplo de dos o de tres`);
+    }
+} */
+
+
+// Primero, con el while (true) el programa se va a ejecutar siempre hasta el break, que en este caso con un if hacemos que cuando el usuario ingrese una cadena vacía se corta el programa usando break;
+
+while (true) {
+    // El usuario ingresa el nombre del alumno
+    const nombre = readlineSync.question('Ingrese el nombre del alumno (o una cadena vacía para terminar): ');
+
+    // Si ingresa cadena vacía, se corta
+    if (nombre === '') {
+        break;
+    }
+
+    // Declaramos las constantes para que el usuario ingrese las notas por separado
+    const notaPractica = readlineSync.questionFloat('Ingrese la nota de la parte práctica (0 a 10): ');
+    const notaProblemas = readlineSync.questionFloat('Ingrese la nota de la parte de problemas (0 a 10): ');
+    const notaTeorica = readlineSync.questionFloat('Ingrese la nota de la parte teórica (0 a 10): ');
+
+    // Si alguna de las notas es menor a 1 o mayor a 10, mostramos mensaje de error y el programa vuelve a iniciarse desde el principio
+    if (notaPractica < 0 || notaPractica > 10 || notaProblemas < 0 || notaProblemas > 10 || notaTeorica < 0 || notaTeorica > 10) {
+        console.log('Error: Las notas deben estar entre 0 y 10. Continuando con el siguiente alumno...');
+        continue;
+    }
+
+    // Calculamos la nota final sumando todas las notas, pero multiplicando cada una por el valor que dio la consigna (10%, 50% y 40%)
+    const notaFinal = (notaPractica * 0.1) + (notaProblemas * 0.5) + (notaTeorica * 0.4);
+
+    console.log(`Alumno: ${nombre}`);
+    console.log(`Nota final: ${notaFinal}`);
+}
+
+
+// El usuario ingresa los dos números
+const numero1 = readlineSync.questionInt('Ingrese el primer numero entero: ');
+const numero2 = readlineSync.questionInt('Ingrese el segundo numero entero: ');
+
+// Declaramos la variable que va a contener la suma de los números entre el primer numero ingresado y el segundo
+let suma = 0;
+
+// Empezamos el for desde el primer número ingresado, y lo terminamos con el segundo número ingresado
+for (let i = numero1; i <= numero2; i++) {
+    // En cada iteración, se va acumulando la suma de los números en la variable: suma
+    suma += i;
+}
+
+
+console.log(`La suma de los números entre ${numero1} y ${numero2} es: ${suma}`);

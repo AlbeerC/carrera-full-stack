@@ -118,7 +118,7 @@ console.log(`Tiempo promedio por vuelta: ${tiempoPromedio}`);
 //Una tienda al cumplir años en Octubre ofrece un descuento del 15% a sus clientes en todas sus compras
 //•Desarrolle un algoritmo que dada una compra: precio unitario, cantidad y el mes, indicados por el usuario, determine  si el cliente tiene descuento o no 
 
-const precioUnitario: number = readlineSync.questionInt("Ingrese el precio unitario: ")
+/* const precioUnitario: number = readlineSync.questionInt("Ingrese el precio unitario: ")
 const cantidad: number = readlineSync.questionInt("Ingrese la cantidad: ")
 const mes: string = readlineSync.question("Ingrese el mes: ")
 
@@ -129,7 +129,7 @@ if (mes == "octubre" || mes == "Octubre") {
 } else {
     console.log("no hay descuento");
 }
-
+ */
 
 
 // Auto de carreras
@@ -137,7 +137,7 @@ if (mes == "octubre" || mes == "Octubre") {
 // •Se necesita un programa que permita ingresar por teclado el tiempo de cada vuelta
 // •El programa debe retornar el tiempo total y el promedio de vuelta
 
-let tiempoTotal: number = 0;
+/* let tiempoTotal: number = 0;
 let promedioVuelta: number = 0;
 
 for (let i = 1; i <= 4; i++) {
@@ -148,7 +148,7 @@ for (let i = 1; i <= 4; i++) {
 }
 
 console.log("El tiempo total es: ", tiempoTotal)
-console.log("El promedio es: ", promedioVuelta)
+console.log("El promedio es: ", promedioVuelta) */
 
 
 
@@ -156,7 +156,7 @@ console.log("El promedio es: ", promedioVuelta)
 // • Recuerde que un numero es múltiplo de otro si al dividirlo su resto es cero
 // • Recuerde que la operación mod permite saber si el resto de una división es cero
 
-function esMultiplo (numero1: number, numero2: number): boolean {
+/* function esMultiplo (numero1: number, numero2: number): boolean {
     if (numero1 % numero2 == 0) {
         return true
     } else {
@@ -166,7 +166,7 @@ function esMultiplo (numero1: number, numero2: number): boolean {
 
 console.log(esMultiplo(10, 5))
 console.log(esMultiplo(12, 4))
-console.log(esMultiplo(18, 4))
+console.log(esMultiplo(18, 4)) */
 
 
 
@@ -174,7 +174,7 @@ console.log(esMultiplo(18, 4))
 // • El usuario puede introducir valores numéricos, tanto positivos como negativos
 // • Contar la cantidad de valores introducidos que sean mayores a 0 y el porcentaje de positivos respecto del total
 
-let cantidadTotal: number = 0;
+/* let cantidadTotal: number = 0;
 let cantidadPositivos: number = 0;
 let cantidadNegativos: number = 0;
 let porcentajePositivos: number = 0;
@@ -199,4 +199,71 @@ porcentajePositivos= (cantidadPositivos / cantidadTotal) * 100
 
 console.log("La cantidad de numeros positivos es: ", cantidadPositivos);
 console.log("La cantidad de numeros negativos es: ", cantidadNegativos);
-console.log("El porcentaje de positivos respecto del total es: ", porcentajePositivos);
+console.log("El porcentaje de positivos respecto del total es: ", porcentajePositivos); */
+
+
+
+
+
+// Clase 9 - Arreglos y métodos:
+
+// Implemente un método llamado “multiplicarArreglo” que recibe como parámetros tres arreglos Enteros del mismo tamaño
+// Los dos primeros arreglos contienen los números que se quieren multiplicar
+// El tercer arreglo almacena el cálculo de la multiplicación de cada posición de los dos arreglos
+// Utilice este método para multiplicar los siguientes cuatro arreglos de tres elementos 
+
+/* const array1: number[] = [1, 2, 3, 21, 1, 5, 6]
+const array2: number[] = [4, 5, 6, 15, 4, 11, 3]
+const array3: number[] = []
+
+
+function multiplicarArreglo (arr1: number[], arr2: number[], arr3: number[]): number[] {
+
+    for (let i = 0; i < arr1.length; i++) {
+        array3[i] = arr1[i] * arr2[i]
+    }
+
+    return array3
+}
+
+console.log(multiplicarArreglo(array1, array2, array3)) */
+
+
+// Dado el siguiente arreglo: [4,7,9,3,1,45,67,23,29,78,11,16]
+// Crear un programa que encuentre cuál es el número más grande del arreglo e imprimirlo por consola
+// Almacenar el número más grande en una variable global y pasarlo a una función para determinar si el número es par o impar
+
+
+const mayorNumero: number[] = [4, 7, 9, 3, 1, 45, 67, 23, 29, 78, 11, 16, 34, 3, 121]
+const array2: number[] = [3, 6, 34, 67, 3, 6, 342, 6]
+const array3: number[] = [7, 12, 90, 5, 55, 8]
+
+
+function encontrarMayorEnArray (array: number[]): number {
+    
+    let nroMayor: number = array[0]
+
+    for (let indice = 1; indice < array.length; indice++) {
+
+        if (array[indice] > nroMayor) {
+            nroMayor = array[indice]
+        }
+    }
+
+    return nroMayor
+}
+
+console.log(encontrarMayorEnArray(mayorNumero))
+
+
+function parimpar(numero: number): string {
+
+    if (numero % 2 == 0) {
+        return "par"
+
+    } else {
+        return "impar"
+    }
+}
+
+console.log(parimpar(encontrarMayorEnArray(mayorNumero)))
