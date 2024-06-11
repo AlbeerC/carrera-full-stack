@@ -209,25 +209,161 @@ console.log(multiplicarArreglo(array1, array2, array3)) */
 // Dado el siguiente arreglo: [4,7,9,3,1,45,67,23,29,78,11,16]
 // Crear un programa que encuentre cuál es el número más grande del arreglo e imprimirlo por consola
 // Almacenar el número más grande en una variable global y pasarlo a una función para determinar si el número es par o impar
-var mayorNumero = [4, 7, 9, 3, 1, 45, 67, 23, 29, 78, 11, 16, 34, 3, 121];
-var array2 = [3, 6, 34, 67, 3, 6, 342, 6];
-var array3 = [7, 12, 90, 5, 55, 8];
-function encontrarMayorEnArray(array) {
-    var nroMayor = array[0];
-    for (var indice = 1; indice < array.length; indice++) {
+/* const mayorNumero: number[] = [4, 7, 9, 3, 1, 45, 67, 23, 29, 78, 11, 16, 34, 3, 121]
+const array2: number[] = [3, 6, 34, 67, 3, 6, 342, 6]
+const array3: number[] = [7, 12, 90, 5, 55, 8]
+
+
+function encontrarMayorEnArray (array: number[]): number {
+    
+    let nroMayor: number = array[0]
+
+    for (let indice = 1; indice < array.length; indice++) {
+
         if (array[indice] > nroMayor) {
-            nroMayor = array[indice];
+            nroMayor = array[indice]
         }
     }
-    return nroMayor;
+
+    return nroMayor
 }
-console.log(encontrarMayorEnArray(mayorNumero));
-function parimpar(numero) {
+
+console.log(encontrarMayorEnArray(mayorNumero))
+
+
+function parimpar(numero: number): string {
+
     if (numero % 2 == 0) {
-        return "par";
-    }
-    else {
-        return "impar";
+        return "par"
+
+    } else {
+        return "impar"
     }
 }
-console.log(parimpar(encontrarMayorEnArray(mayorNumero)));
+
+console.log(parimpar(encontrarMayorEnArray(mayorNumero))) */
+// Crea una funcion que tome un arreglo de numeros como parametro y devuelva el promedio de los elementos del arreglo
+/* const arreglo: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const arreglo2: number[] = [2, 56, 6, 70, 80, 34, 21, 90, 13, 1] */
+/* function promedio(arreglo: number[]) {
+    let acumulador: number = 0;
+
+    for (let i = 0; i < arreglo.length; i++) {
+        acumulador += arreglo[i]
+    }
+
+    const promedioDeElementos: number = acumulador / arreglo.length
+
+    console.log("El total de la suma del arreglo es: ", acumulador)
+    console.log("El promedio es: ", promedioDeElementos);
+}
+
+promedio(arreglo)
+promedio(arreglo2) */
+/* function encontrarPares (array: number[]): number {
+    let acumulador: number = 0
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            acumulador++
+        }
+    }
+
+    return acumulador
+}
+
+console.log(encontrarPares(arreglo))
+console.log(encontrarPares(arreglo2)) */
+/* const arrayVeces: number[] = [1, 4, 60, 45, 25, 70, 47, 21, 4, 9, 11, 128, 4, 12]
+
+function encontrarVeces (array: number[], elemento: number) {
+    let acumulador: number = 0
+
+    for (let i = 0; i < array.length; i++) {
+        if (elemento === array[i]) {
+            acumulador++
+        }
+    }
+
+    console.log(`El número ${elemento} se encuentra repetido ${acumulador} veces en el array`)
+}
+
+encontrarVeces(arrayVeces, 4) */
+/* let arreglo:number[]=[2, 5, 7, 12, 13, 15, 11, 14, 17]
+
+let arregloNumPrimos:number[]= [];
+
+function parametroArregloNum (array:number[]) {
+
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 2; i <= Math.sqrt(array[i]); j++) {
+            if (i % j !== 0) {
+                console.log("es primo")
+            } else {
+                console.log("no es primo")
+            }
+        }
+    }
+}
+
+parametroArregloNum(arreglo) */
+/* const arreglo = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+let arregloNumPrimos: number[] = [];
+
+function esPrimo(numero: number): boolean {
+    if (numero <= 1) return false;
+
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+function parametroArregloNum(array: number[], arrayPrimos: number[]): number[] {
+    for (let i = 0; i < array.length; i++) {
+        if (esPrimo(array[i])) {
+            arrayPrimos.push(array[i]);
+        }
+    }
+
+    return arrayPrimos;
+}
+
+console.log(parametroArregloNum(arreglo, arregloNumPrimos));
+ */
+//Escribe una funcion que reciba como parametros de numeros y un valor x  y devuelva la multiplicacion de todos los elementos del arreglo que sean mayores a x  
+/* const arreglo: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+function multiplicarArreglo (array: number[], x: number): number {
+    let acumulador: number = 1;
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > x) {
+            acumulador *= array[i]
+        }
+    }
+
+    return acumulador
+}
+
+console.log(multiplicarArreglo(arreglo, 5))  */
+var stringQuince = "Cree un string de al menos quince caracteres";
+var stringPasadoAMayuscula = stringQuince.toUpperCase();
+var CantidadLetraA = 0;
+var CantidadLetraE = 0;
+var CantidadLetraO = 0;
+var creeUnArregloDeTresElementos = [0, 0, 0];
+for (var i = 0; i < stringPasadoAMayuscula.length; i++) {
+    if (stringPasadoAMayuscula[i] == "A") {
+        creeUnArregloDeTresElementos[0]++;
+    }
+    else if (stringPasadoAMayuscula[i] == "E")
+        creeUnArregloDeTresElementos[1]++;
+    else
+        (stringPasadoAMayuscula[i] == "O");
+    creeUnArregloDeTresElementos[2]++;
+}
+console.log(creeUnArregloDeTresElementos);
