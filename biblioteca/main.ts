@@ -3,10 +3,10 @@
 // Los recursos pueden incluir libros, revistas, y videos, cada uno con propiedades y métodos específicos.
 // Además, ciertos miembros pueden tener privilegios especiales para acceder a recursos limitados o exclusivos.
 
-import { Biblioteca } from "./Biblioteca";
-import { Cliente } from "./Cliente";
-import { Libro } from "./Libro";
-import { Video } from "./Video";
+import { Biblioteca } from "./Biblioteca"
+import { Cliente } from "./Cliente"
+import { Libro } from "./Libro"
+import { Video } from "./Video"
 
 const biblioteca = new Biblioteca("Biblio", 129, "Olavarría")
 
@@ -20,18 +20,26 @@ const libro1 = new Libro("El principito", "Antonie", 1947, "Infantil", true, tru
 biblioteca.agregarCliente(cliente1)
 biblioteca.agregarCliente(cliente2)
 biblioteca.agregarRecurso(video1)
+biblioteca.agregarRecurso(video2)
 biblioteca.agregarRecurso(libro1)
 
 
+cliente1.agregarRecurso(libro1) // No puede, ya que el libro es exclusivo y el cliente no.
+cliente1.hacerExclusivo() // Todavía no puede ser exclusivo
 cliente1.agregarRecurso(video1)
+cliente1.agregarRecurso(video2)
+cliente1.hacerExclusivo() // Ahora sí puede ser exclusivo
+cliente1.agregarRecurso(libro1) // Y ahora sí puede agregar el libro
 
-/* console.log(biblioteca.getClientes())
-console.log(biblioteca.getRecursos()) */
+console.log(cliente1.getRecursosConsumidos()) // Ver recursos del cliente
 
+
+// Métodos de leer libro y reproducir video
 libro1.consumir()
 video1.consumir()
 video1.consumir()
 video1.consumir()
-video2.consumir()
-video2.consumir()
-video2.consumir()
+
+// Ver clientes y recursos de una biblioteca
+console.log(biblioteca.getClientes())
+console.log(biblioteca.getRecursos())
